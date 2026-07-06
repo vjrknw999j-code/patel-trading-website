@@ -79,7 +79,16 @@
   .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;}
   .cat-card{background:var(--pt-cream);border-radius:16px;overflow:hidden;cursor:pointer;transition:.25s;border:2px solid transparent;position:relative;}
   .cat-card:hover{transform:translateY(-6px);border-color:var(--pt-gold);box-shadow:0 14px 30px rgba(0,0,0,.1);}
-  .cat-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,var(--pt-green),var(--pt-green-dark));color:#fff;}
+  .cat-img{height:150px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--pt-green),var(--pt-green-dark));}
+  .cat-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+  .cat-card:hover .cat-img img{transform:scale(1.08);}
+
+  /* Quote section */
+  .quote-section{background:var(--pt-cream);padding:80px 24px;text-align:center;}
+  .quote-mark{font-size:4.5rem;color:var(--pt-gold);line-height:1;font-family:Georgia,serif;margin-bottom:6px;}
+  .quote-text{font-size:1.55rem;font-style:italic;color:var(--pt-dark);max-width:780px;margin:0 auto 22px;font-weight:600;line-height:1.5;}
+  .quote-author{color:var(--pt-green-dark);font-weight:800;font-size:1.05rem;}
+  .quote-author span{display:block;color:#888;font-weight:500;font-size:.85rem;margin-top:4px;font-style:normal;}
   .cat-body{padding:22px;}
   .cat-body h4{color:var(--pt-dark);font-size:1.15rem;margin-bottom:6px;}
   .cat-body p{color:#777;font-size:.9rem;margin-bottom:14px;}
@@ -261,29 +270,37 @@
   </div>
   <div class="cat-grid">
     <div class="cat-card clickable" onclick="openMenu('staples')">
-      <div class="cat-img">🌾</div>
+      <div class="cat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Long_grain_rice.jpg" alt="Rice and grocery staples" loading="lazy"></div>
       <div class="cat-body"><h4>Grocery Staples</h4><p>Rice, lentils, flour, oils &amp; more</p><span class="cat-link">View items &amp; prices →</span></div>
     </div>
     <div class="cat-card clickable" onclick="openMenu('spices')">
-      <div class="cat-img">🌶️</div>
+      <div class="cat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Indian_SPices.jpg" alt="Indian spices and masalas" loading="lazy"></div>
       <div class="cat-body"><h4>Spices &amp; Masalas</h4><p>Whole, ground &amp; blended spice mixes</p><span class="cat-link">View items &amp; prices →</span></div>
     </div>
     <div class="cat-card clickable" onclick="openMenu('produce')">
-      <div class="cat-img">🥬</div>
+      <div class="cat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Vegetables_0006.JPG" alt="Fresh vegetables and produce" loading="lazy"></div>
       <div class="cat-body"><h4>Fresh Produce</h4><p>Vegetables &amp; fruits sourced fresh daily</p><span class="cat-link">View items &amp; prices →</span></div>
     </div>
     <div class="cat-card clickable" onclick="openMenu('frozen')">
-      <div class="cat-img">🧊</div>
+      <div class="cat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Frozen_Food.jpg" alt="Frozen food selection" loading="lazy"></div>
       <div class="cat-body"><h4>Frozen Foods</h4><p>Parathas, snacks, ready-to-cook meals</p><span class="cat-link">View items &amp; prices →</span></div>
     </div>
     <div class="cat-card clickable" onclick="openMenu('snacks')">
-      <div class="cat-img">🍪</div>
+      <div class="cat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Indian_Snacks.jpg" alt="Indian snacks and sweets" loading="lazy"></div>
       <div class="cat-body"><h4>Snacks &amp; Sweets</h4><p>Namkeen, biscuits &amp; traditional mithai</p><span class="cat-link">View items &amp; prices →</span></div>
     </div>
     <div class="cat-card clickable" onclick="openMenu('beverages')">
-      <div class="cat-img">🥤</div>
+      <div class="cat-img"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Masala_Chai.jpg" alt="Tea and beverages" loading="lazy"></div>
       <div class="cat-body"><h4>Beverages</h4><p>Tea, juices, soft drinks &amp; more</p><span class="cat-link">View items &amp; prices →</span></div>
     </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="quote-mark">&ldquo;</div>
+  <p class="quote-text">Good food, fair prices, and a warm welcome — that's not just what we sell, it's who we are.</p>
+  <div class="quote-author">The Patel Trading Family
+    <span>Serving Sydney's community since 2004</span>
   </div>
 </section>
 
